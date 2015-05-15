@@ -17,6 +17,12 @@
       <% if user_signed_in? %>
         <h5>Signed in as: <%= current_user.username %></h5>
         <h5><%= link_to 'Signout',destroy_user_session_path, :method => :delete %></h5>
+        <% if current_user.score %>
+          <% score = current_user.score.score %>
+        <% else %>
+          <% id = current_user.id %>
+          <% score = Score.create(user_id: id, score: 0)%>
+        <% end%>
         <h5>Score: <%= current_user.score.score %></h5>
       <% else %> 
         <h5><%= link_to 'Signin', new_user_session_path %></h5>
