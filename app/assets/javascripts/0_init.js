@@ -22,9 +22,17 @@ var ready = function ready () {
 		button.on("click", function(){
 			if (event.toElement.value === compareName){
 				result.html("You are correct! Title of the song is: " + songName);
+				result.css('color', 'lime');
+				var num = event.toElement.id.split("")[6];
+				var div = $("#c" + num);
+				div.css('color', 'lime');
 				updateScore();
 			} else {
 				result.html("You are incorrect! The correct answer is: " + songName);
+				result.css('color', 'red');
+				var num = event.toElement.id.split("")[6];
+				var div = $("#c" + num);
+				div.css('color', 'red');
 			}
 			offDivs.hide();
 			showAns.append(event.toElement.parentElement);
