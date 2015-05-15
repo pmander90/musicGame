@@ -12,7 +12,7 @@ TopArtist.prototype = {
 			for(var i=0; i<data.length; i++){
 				topArtistModel.topArtists.push(data[i].name);
 			}
-			topArtistView.render();
+			// topArtistView.render();
 		});
 	}
 }
