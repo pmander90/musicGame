@@ -7,7 +7,7 @@ TopArtist.prototype = {
 		$.ajax({
 			type: 'GET',
 			dataType: 'json',
-			url: 'https://localhost:3000//topartists/'
+			url: '/topartists'
 		}).done(function(data){
 			for(var i=0; i<data.length; i++){
 				topArtistModel.topArtists.push(data[i].name);
