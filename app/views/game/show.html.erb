@@ -1,43 +1,53 @@
-<div id="artist">Artist: <%= @name %></div>
-<div id="result"></div>
+<div class="col-xs-12">
+	<div id="artist">Artist: <%= @name %></div>
+	<div id="result"></div>
+</div>
 
-<h3><%= @lyric1 %></h3>
+<div class="col-xs-12">
+	<div id="lyrics">
+		<h3><%= @lyric1 %></h3>
+	</div>
+</div>
 
 <div id="songName" style= "display: none;"><%=@song0%></div>
 <div id="compareName" style= "display: none;"><%=@song0.split().join()%></div>
 
-<div class="choices">
-<div id="c0">
-<input id="choice0" type="radio" name="song" value=<%=@songs[0].split().join()%>> <%=@songs[0]%>  
+<div class="col-xs-12">
+	<div class="choices">
+	<div id="c0">
+	<input id="choice0" type="radio" name="song" value=<%=@songs[0].split().join()%>> <%=@songs[0]%>  
+	</div>
+
+	<div id="c1">
+	<input id="choice1" type="radio" name="song" value=<%=@songs[1].split().join()%>> <%=@songs[1]%>
+	</div>
+
+	<div id="c2">
+	<input id="choice2" type="radio" name="song" value=<%=@songs[2].split().join()%>> <%=@songs[2]%>
+	</div>
+
+	<div id="c3">
+	<input id="choice3" type="radio" name="song" value=<%=@songs[3].split().join()%>> <%=@songs[3]%> 
+	</div>
+	</div>
+	<div class="showAns"></div>
 </div>
 
-<div id="c1">
-<input id="choice1" type="radio" name="song" value=<%=@songs[1].split().join()%>> <%=@songs[1]%>
-</div>
-
-<div id="c2">
-<input id="choice2" type="radio" name="song" value=<%=@songs[2].split().join()%>> <%=@songs[2]%>
-</div>
-
-<div id="c3">
-<input id="choice3" type="radio" name="song" value=<%=@songs[3].split().join()%>> <%=@songs[3]%> 
-</div>
-</div>
-
-<div class="showAns"></div>
-
-
-<div class="nextButton" style= "display: none;">
-<%= form_tag "/show", method: :get do %>
-	<%= hidden_field_tag :artist, @artist %>
-	<%= submit_tag "Next" %>
-<% end %>
-</div>
-
-<div class="video" style= "display: none;">
-	<% if @works %>
-		<iframe width='400' height='300' src='https://www.youtube.com/embed/<%=@videoId%>'>
-		</iframe>
+<div class="col-xs-12">
+	<div class="nextButton" style= "display: none;">
+	<%= form_tag "/show", method: :get do %>
+		<%= hidden_field_tag :artist, @artist %>
+		<%= submit_tag "Next" %>
 	<% end %>
+	</div>
+</div>
+
+<div class="col-xs-12">
+	<div class="video" style= "display: none;">
+		<% if @works %>
+			<iframe width='400' height='300' src='https://www.youtube.com/embed/<%=@videoId%>'>
+			</iframe>
+		<% end %>
+	</div>
 </div>
 

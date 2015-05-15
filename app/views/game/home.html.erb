@@ -1,7 +1,15 @@
-<%= form_tag "/show", method: :get do %>
-	<%= label_tag :artist, "Enter Artist:" %>
-	<%= search_field_tag :artist %>
-	<%= submit_tag "Search" %>
-<% end %>
-<div id="top"></div>
+<div class="col-xs-12" id="search">
+	<%= form_tag "/show", method: :get do %>
+		<%= label_tag :artist, "Enter Artist:" %>
+		<%= search_field_tag :artist %>
+		<%= submit_tag "Search" %>
+	<% end %>
+</div>
+
+<div class="col-xs-12" id="top">
+	<div id="top"></div>
+</div>
+
+
+
 

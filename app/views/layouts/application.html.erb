@@ -7,27 +7,29 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<div class="HomeButton" >
-		<%= form_tag "/home", method: :get do %>
-			<%= submit_tag "Home" %>
-		<% end %>
-	</div>
-
-	<div class='sign-in-out'>
+  <header class="col-xs-12">
+	 <div class='col-xs-6' id="userinfo">
       <% if user_signed_in? %>
         <h5>Signed in as: <%= current_user.username %></h5>
         <h5><%= link_to 'Signout',destroy_user_session_path, :method => :delete %></h5>
-
-        <% if current_user.score %>
-          <h5>Score: <%= nowScore = current_user.score.score %></h5>
-        <% else %>
-          <% id = current_user.id %>
-          <h5>Score: <%= newScore = Score.create(user_id: id, score: 0).score %></h5>
-        <% end%>
+        <div class="score">
+          <% if current_user.score %>
+            <h5>Score: <%= nowScore = current_user.score.score %></h5>
+          <% else %>
+            <% id = current_user.id %>
+            <h5>Score: <%= newScore = Score.create(user_id: id, score: 0).score %></h5>
+          <% end%>
+        </div>
       <% else %> 
         <h5><%= link_to 'Signin', new_user_session_path %></h5>
       <% end %>
      </div>
+    <div class="col-xs-6" id="homebutton">
+      <%= form_tag "/home", method: :get do %>
+      <%= submit_tag "Home" %>
+    <% end %>
+   </div>
+   </header>
 
 <%= yield %>
 
