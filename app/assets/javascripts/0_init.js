@@ -6,7 +6,7 @@ var ready = function ready () {
 		$.ajax({
 			type: 'PUT',
 			dataType: 'json',
-			url: 'http://localhost:3000/scores'
+			url: '/scores'
 		})
 	}
 	for(var i=0; i<4; i++){
