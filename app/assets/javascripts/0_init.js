@@ -6,10 +6,10 @@ var ready = function ready () {
 		$.ajax({
 			type: 'PUT',
 			dataType: 'json',
-			url: '/scores'
+			url: 'https://localhost:3000//scores'
 		});
 	}
-	
+
 	for(var i=0; i<4; i++){
 		var songName = $("#songName").html();
 		var compareName = $("#compareName").html();
