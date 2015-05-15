@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MusicGame</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<div class="HomeButton" >
+		<%= form_tag "/home", method: :get do %>
+			<%= submit_tag "Home" %>
+		<% end %>
+	</div>
+
+	<div class='sign-in-out'>
+      <% if user_signed_in? %>
+        <h5>Signed in as: <%= current_user.username %></h5>
+        <h5><%= link_to 'Signout',destroy_user_session_path, :method => :delete %></h5>
+        <h5>Score: <%= current_user.score.score %></h5>
+      <% else %> 
+        <h5><%= link_to 'Signin', new_user_session_path %></h5>
+      <% end %>
+     </div>
+
+<%= yield %>
+
+</body>
+</html>
