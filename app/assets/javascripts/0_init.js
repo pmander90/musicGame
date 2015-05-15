@@ -7,8 +7,9 @@ var ready = function ready () {
 			type: 'PUT',
 			dataType: 'json',
 			url: '/scores'
-		})
+		});
 	}
+	
 	for(var i=0; i<4; i++){
 		var songName = $("#songName").html();
 		var compareName = $("#compareName").html();
