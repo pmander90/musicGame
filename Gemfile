@@ -1,10 +1,10 @@
 source 'https://rubygems.org'
 
 gem "rapgenius", "~> 1.0.5"
-gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
 gem 'jquery-turbolinks'
 gem 'devise'
+gem 'bootstrap-sass'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'

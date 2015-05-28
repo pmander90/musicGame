@@ -10,6 +10,7 @@
 
 #userinfo{
 	text-align: left;
+	color: white;
 }
 
 .choices{
@@ -19,8 +20,7 @@
 
 #lyrics{
 	text-align: center;
-	border: 2px solid whitesmoke;
-	background-color: whitesmoke;
+	color: white;
 	margin: 5px;
 }
 
@@ -31,4 +31,15 @@
 .video{
 	margin-top: 10px;
 	text-align: center;
+}
+
+body {
+	background-image: url("http://p1.pichost.me/i/20/1427031.jpg");
+	background-size: cover;
+	background-position: ;
+	background-repeat: no-repeat; 
+	padding: 10px 10px 1000px 10px;
+}
+.page{
+	margin-top: 100px;
 }
