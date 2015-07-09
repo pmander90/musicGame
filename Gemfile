@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'lyricfy'
+gem "rapgenius", "~> 1.1.1"
 gem "genius", "~> 0.1.1"
 gem 'autoprefixer-rails'
 gem 'jquery-turbolinks'
