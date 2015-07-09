@@ -27,6 +27,9 @@ var ready = function ready () {
 				var div = $("#c" + num);
 				div.css('color', 'lime');
 				updateScore();
+				var currentScore = $('.score').children()[0].innerHTML;
+				$('.score').children()[0].innerHTML = currentScore + ' +1';
+				$('.score').css('color', 'lime');
 			} else {
 				result.html("You are incorrect! The correct answer is: " + songName);
 				result.css('color', 'red');
