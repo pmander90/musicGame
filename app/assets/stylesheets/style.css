@@ -56,3 +56,11 @@
 	color: white;
 	text-align: center;
 }
+
+#signIn {
+	margin-top: 20px;
+}
+
+#signDes {
+	font-size: 80%;
+}
