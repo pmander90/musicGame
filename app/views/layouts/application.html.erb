@@ -26,14 +26,12 @@
         <% end %>
       </div>
 
-      <div class='col-xs-4' id='title'>
+      <div class="col-xs-4" id='title'>
         <h3>Guess The Lyrics<h3>
       </div>
 
       <div class="col-xs-4" id="homebutton">
-        <%= form_tag "/home", method: :get do %>
-          <%= submit_tag "Home" %>
-        <% end %>
+        <h5><%= link_to 'Home', '/'%></h5>
       </div>
     </div>
   </header>
